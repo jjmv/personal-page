@@ -4,6 +4,7 @@ import "./_styles.scss";
 
 export default function NavBar() {
   const { pathname } = useLocation();
+  console.log(pathname);
 
   return (
     <>
