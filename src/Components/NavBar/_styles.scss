@@ -1,0 +1,48 @@
+@import "../../Styles//_vars.scss";
+
+.navBar {
+  display: flex;
+  background-color: $tertiary-white;
+  height: 5.5rem;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba($tertiary-black, 0.19);
+
+  &-button {
+    text-decoration: none;
+    padding: 0.8rem;
+    width: 10rem;
+    height: 5.5rem;
+    background-color: transparent;
+    color: $secondary-black;
+    border: 0;
+    animation: show-buttons 3s;
+    animation-fill-mode: forwards;
+    transition: 0.5s background-color;
+
+    &.selected {
+      background-color: $secondary-black;
+      color: $tertiary-white;
+    }
+
+    &:hover {
+      &:not(.selected) {
+        background-color: $secondary-white;
+      }
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+@keyframes show-buttons {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
